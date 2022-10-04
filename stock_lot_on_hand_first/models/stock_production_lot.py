@@ -18,7 +18,7 @@ class ProductionLot(models.Model):
             )
 
             if with_quantity_count >= limit:
-                name = with_quantity_domain
+                args = with_quantity_domain
             else:
                 with_quantity_ids = super()._name_search(
                     name=name, args=with_quantity_domain, operator=operator, limit=limit
